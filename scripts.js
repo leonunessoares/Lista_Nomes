@@ -36,9 +36,8 @@ const cadForm = {
         removerNome: function(nome) {
             const i = this.lista.indexOf(nome)
             this.lista.splice(i, 1)         
-        },      
+        }
     }
-
 };
 
 Vue.createApp(cadForm).mount('#app');

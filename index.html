@@ -36,6 +36,11 @@
                         
                         <td>{{listanome.sobrenome}}</td>
                         
+                        <td v-if="lista.length" >
+                          <input type="button" value="Excluir" 
+                          class="btn btn-danger" 
+                          @click="removerNome(listanome)">
+                        </td>
                     </tr>
                   </tbody>
               </table>

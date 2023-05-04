@@ -32,7 +32,11 @@ const cadForm = {
                 this.lista.push(this.novoNome);
                 this.novoNome = {};
             }
-        },        
+        },   
+        removerNome: function(nome) {
+            const i = this.lista.indexOf(nome)
+            this.lista.splice(i, 1)         
+        },      
     }
 
 };

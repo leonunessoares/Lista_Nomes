@@ -1,5 +1,5 @@
 # Lista_Nomes
-Adicionar Lista de Nomes com VUE 
+Adiciona e Remove Nomes de uma Lista com VUE 
 
 ## Feito com Bootstrap5 e VUE
 

@@ -19,8 +19,7 @@
             
               <h1>
                 {{topo}}
-              </h1>
-
+              </h1>                            
               <table>
                   <thead>
                     <tr>
@@ -42,14 +41,13 @@
                           @click="removerNome(listanome)">
                         </td>
                     </tr>
-                  </tbody>
+                  </tbody>                  
+                  
               </table>
               <br>
-              <br>
-              <section>
-                  
-                  <form>
-                    
+              <br>              
+              <section>                  
+                  <form>                    
                     <label>Nome:</label><br>
                     <input type="text" id="nome" name="nome" 
                     v-model="novoNome.nome"><br>
@@ -59,19 +57,17 @@
                     v-model="novoNome.sobrenome"><br>
     
                     <br><br>
+                    <div class="alert alert-warning" v-if ="camposObrigatorios">
+                      Favor preencher todos os campos!
+                    </div>
+                    <br>
                     <input type="button" value="Salvar" 
-                    class="btn btn-primary"  @click="adicionarNome()">
-
-                    
+                    class="btn btn-primary"  @click="adicionarNome()">                    
                   </form> 
-              </section>
-              
-        </main>
-        
+              </section>              
+        </main>        
       </nav>
         <script src="https://unpkg.com/vue@next"></script>
-        <script src="scripts.js"></script>
-        
+        <script src="scripts.js"></script>        
     </body>
-
 </html>

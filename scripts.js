@@ -18,6 +18,7 @@ const cadForm = {
             lista: window.lista,
             topo: "Lista de Nomes com VUE",
             titulo: "Exemplo VUE",
+            camposObrigatorios: false,
             novoNome: {
 
             }
@@ -27,8 +28,10 @@ const cadForm = {
     methods: {
         adicionarNome: function() {
             if (!(this.novoNome.nome && this.novoNome.sobrenome)) {
-                alert('Informe todos os campos!')
+                this.camposObrigatorios = true
+                setTimeout(() => this.camposObrigatorios = false, 1500);
             } else {
+                this.camposObrigatorios = false;
                 this.lista.push(this.novoNome);
                 this.novoNome = {};
             }
